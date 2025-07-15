@@ -80,6 +80,8 @@
             backdrop-filter: blur(10px);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
             height: fit-content;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .calendar-header {
@@ -88,22 +90,28 @@
             color: #fff;
             font-size: 24px;
             font-weight: bold;
+            word-wrap: break-word;
         }
 
         .calendar-grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            gap: 8px;
-            max-width: 350px;
+            gap: 6px;
+            width: 100%;
+            max-width: 100%;
             margin: 0 auto;
+            box-sizing: border-box;
         }
 
         .calendar-day-header {
             text-align: center;
             font-weight: bold;
             color: rgba(255, 255, 255, 0.7);
-            padding: 8px 4px;
-            font-size: 12px;
+            padding: 6px 2px;
+            font-size: 11px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
 
         .calendar-day {
@@ -111,11 +119,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 8px;
+            border-radius: 6px;
             color: rgba(255, 255, 255, 0.8);
-            font-size: 14px;
+            font-size: 12px;
             transition: all 0.3s ease;
             cursor: pointer;
+            min-height: 30px;
+            overflow: hidden;
         }
 
         .calendar-day:hover {
@@ -211,15 +221,15 @@
         }
 
         .content {
-            flex: 0 0 50%;
+            flex: 0 0 45%;
             color: white;
-            max-width: 50%;
+            max-width: 45%;
             height: calc(100vh - 120px);
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             padding-left: 40px;
-            padding-right: 60px;
+            padding-right: 30px;
         }
 
         .calendar-section {
@@ -227,19 +237,21 @@
             max-width: 25%;
             height: calc(100vh - 120px);
             overflow-y: auto;
-            padding: 20px;
+            overflow-x: hidden;
+            padding: 15px;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
         }
 
         .detailed-section {
-            flex: 0 0 25%;
-            max-width: 25%;
+            flex: 0 0 30%;
+            max-width: 30%;
             background: transparent;
-            padding: 20px;
+            padding: 15px;
             height: calc(100vh - 120px);
             overflow-y: auto;
+            overflow-x: hidden;
             margin-right: 0;
         }
 
@@ -382,98 +394,198 @@
             font-weight: bold;
         }
 
+        @media (max-width: 1200px) {
+            .content {
+                flex: 0 0 40%;
+                max-width: 40%;
+                padding-left: 30px;
+                padding-right: 20px;
+            }
+            
+            .calendar-section {
+                flex: 0 0 28%;
+                max-width: 28%;
+                padding: 12px;
+            }
+            
+            .detailed-section {
+                flex: 0 0 32%;
+                max-width: 32%;
+                padding: 12px;
+            }
+        }
+
         @media (max-width: 1024px) {
             .container {
                 flex-direction: column;
-                gap: 20px;
-                padding: 40px 20px;
+                gap: 15px;
+                padding: 30px 15px;
+                height: auto;
             }
             
             .content {
                 flex: none;
-                max-width: none;
+                max-width: 100%;
+                width: 100%;
                 height: auto;
+                padding-left: 20px;
+                padding-right: 20px;
             }
             
             .calendar-section {
                 flex: none;
-                max-width: none;
+                max-width: 100%;
+                width: 100%;
                 height: auto;
+                padding: 15px;
             }
             
             .detailed-section {
                 flex: none;
-                max-width: none;
+                max-width: 100%;
+                width: 100%;
                 height: auto;
                 max-height: none;
+                padding: 15px;
             }
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 30px 15px;
+                padding: 20px 10px;
                 flex-direction: column;
-                gap: 20px;
+                gap: 15px;
+                height: auto;
             }
             
             .title {
-                font-size: 36px;
+                font-size: 32px;
+                margin-bottom: 20px;
             }
             
             .webinar-title {
-                font-size: 16px;
+                font-size: 15px;
             }
             
             .webinar-date {
-                font-size: 14px;
+                font-size: 13px;
             }
             
             .nav-arrow {
                 left: 10px;
-                padding: 10px 15px;
-                font-size: 20px;
+                padding: 8px 12px;
+                font-size: 18px;
+            }
+            
+            .content {
+                padding-left: 15px;
+                padding-right: 15px;
             }
             
             .calendar-section {
-                padding: 15px;
+                padding: 12px;
+                order: 2;
             }
             
             .detailed-section {
-                padding: 15px;
+                padding: 12px;
+                order: 3;
             }
             
             .detailed-webinar-card {
                 flex-direction: column;
                 text-align: center;
-                padding: 20px;
+                padding: 15px;
+                margin-bottom: 20px;
             }
             
             .speaker-photo {
                 align-self: center;
+                width: 80px;
+                height: 80px;
             }
             
             .calendar-container {
-                padding: 15px;
+                padding: 12px;
                 margin-top: 0;
+                width: 100%;
+                box-sizing: border-box;
             }
             
             .calendar-header {
-                font-size: 20px;
-                margin-bottom: 15px;
+                font-size: 18px;
+                margin-bottom: 12px;
             }
             
             .calendar-grid {
-                max-width: 280px;
-                gap: 4px;
+                gap: 3px;
+                width: 100%;
+                max-width: 100%;
             }
             
             .calendar-day {
-                font-size: 12px;
+                font-size: 10px;
+                min-height: 25px;
+                border-radius: 4px;
             }
             
             .calendar-day-header {
-                font-size: 10px;
-                padding: 6px 2px;
+                font-size: 9px;
+                padding: 4px 1px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px 5px;
+                gap: 10px;
+            }
+            
+            .title {
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+            
+            .content {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            
+            .calendar-container {
+                padding: 10px;
+            }
+            
+            .calendar-header {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            
+            .calendar-grid {
+                gap: 2px;
+            }
+            
+            .calendar-day {
+                font-size: 9px;
+                min-height: 22px;
+                border-radius: 3px;
+            }
+            
+            .calendar-day-header {
+                font-size: 8px;
+                padding: 3px 0px;
+            }
+            
+            .detailed-webinar-card {
+                padding: 12px;
+                margin-bottom: 15px;
+            }
+            
+            .detailed-webinar-title {
+                font-size: 16px;
+            }
+            
+            .webinar-datetime, .webinar-speaker, .webinar-course-number {
+                font-size: 14px;
             }
         }
     </style>
