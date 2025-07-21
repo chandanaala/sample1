@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Engineer's Corner - SKGA Technical Newsletter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding-left: 0;
+        }
+
+        .newsletter-container {
+            width: 100%;
+            margin: 0;
+            background: white;
+            box-shadow: none;
+            padding: 20px 40px;
+        }
+
+
+
+        /* Header Section */
+        .header {
+            padding: 40px 40px 20px 60px;
+            position: relative;
+        }
+
+        .company-name {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            text-align: right;
+            color: #2E5A27;
+            z-index: 10;
+        }
+
+        .company-name-top {
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .company-name-bottom {
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .logo-image {
+            max-width: 200px;
+            height: auto;
+            display: block;
+        }
+
+        /* SVG embedding examples */
+        .svg-example {
+            width: 200px;
+            height: 150px;
+            border: 1px solid #ddd;
+            margin: 10px;
+        }
+
+        .svg-icon {
+            width: 50px;
+            height: 50px;
+            fill: #2E5A27;
+        }
+
+        /* Example section styling */
+        .example-section {
+            margin: 40px 0;
+            padding: 30px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .embedding-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .example {
+            padding: 20px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .example h3 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .main-title {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 48px;
+            text-align: center;
+            margin: 20px 0 10px;
+            color: #333;
+        }
+
+        .separator-line {
+            border-bottom: 2px solid #333;
+            margin: 15px 0;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            margin-left: 20px;
+            color: #666;
+            font-family: Arial, sans-serif;
+        }
+
+
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            padding-left: 20px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: #556B2F;
+            color: white;
+            padding: 50px 25px 20px 20px;
+            width: 250px;
+            align-self: flex-start;
+            margin-top: 0;
+            margin-left: 20px;
+        }
+
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .sidebar li:last-child {
+            margin-bottom: 0;
+        }
+
+        .sidebar li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: black;
+        }
+
+        /* Main Article */
+        .main-article {
+            flex: 1;
+            padding: 30px 40px;
+        }
+
+        .article-title {
+            color: #D2691E;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+
+        .article-content {
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* New Section Styles */
+        .new-section {
+            padding: 40px 40px 40px 0;
+            border-top: 2px solid #eee;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 30px;
+            font-family: Arial, sans-serif;
+        }
+
+        .content-with-image {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .parking-image {
+            width: 380px;
+            height: 250px;
+            background: #f0f0f0;
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic;
+            flex-shrink: 0;
+        }
+
+        .text-content {
+            flex: 1;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        .text-content p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: left;
+            padding-left: 0;
+            margin-left: 0;
+        }
+
+        .text-content p:first-child {
+            margin-top: 0;
+        }
+
+        .additional-content {
+            padding: 5px 0 10px 0;
+            margin-top: 0;
+        }
+
+        .additional-content p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: left;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: 0;
+        }
+
+        .read-more-btn {
+            background: #D2691E;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 15px auto 0;
+            display: block;
+            width: fit-content;
+        }
+
+        .read-more-btn:hover {
+            background: #B8860B;
+        }
+
+        /* Did You Know Section */
+        .did-you-know {
+            padding: 40px;
+            border-top: 2px solid #eee;
+        }
+
+        .did-you-know-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .did-you-know-icon {
+            width: 60px;
+            height: 60px;
+            background: #D2691E;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .did-you-know-title {
+            color: #D2691E;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .did-you-know-content {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .construction-image {
+            width: 400px;
+            height: 300px;
+            background: #f0f0f0;
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic;
+            flex-shrink: 0;
+        }
+
+        .did-you-know-text {
+            flex: 1;
+        }
+
+        .did-you-know-text p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* Book Covers Section */
+        .book-covers-section {
+            padding: 40px;
+            border-top: 2px solid #eee;
+        }
+
+        .book-covers-content {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .book-covers {
+            display: flex;
+            gap: 20px;
+            width: 300px;
+        }
+
+        .book-cover {
+            width: 140px;
+            height: 180px;
+            background: #1e3a8a;
+            color: white;
+            border: 2px dashed #ccc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 12px;
+            padding: 10px;
+        }
+
+        /* Technical Questions Section */
+        .technical-questions {
+            padding: 40px;
+            border-top: 2px solid #eee;
+            background: #FFE4B5;
+        }
+
+        .technical-questions-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .technical-questions-icon {
+            width: 60px;
+            height: 60px;
+            background: #D2691E;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .technical-questions-title {
+            color: #D2691E;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+        }
+
+        .question-answer {
+            margin-bottom: 30px;
+        }
+
+        .question-circle {
+            width: 40px;
+            height: 40px;
+            background: #0066cc;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+
+        .answer-circle {
+            width: 40px;
+            height: 40px;
+            background: #D2691E;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+
+        .qa-content {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .qa-text {
+            flex: 1;
+            font-size: 16px;
+            line-height: 1.8;
+            font-family: Arial, sans-serif;
+        }
+
+        .quick-anchor-update .qa-text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .qa-text.question {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .qa-text.answer {
+            font-style: italic;
+            color: #333;
+        }
+
+        .qa-text.explanation {
+            text-align: justify;
+            color: #333;
+        }
+
+        /* Webinars Section */
+        .webinars {
+            padding: 40px;
+            border-top: 2px solid #eee;
+        }
+
+        .webinars-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .webinars-icon {
+            width: 60px;
+            height: 60px;
+            background: #D2691E;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .webinars-title {
+            color: #D2691E;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .webinar-content {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .fireproofing-image {
+            width: 350px;
+            height: 250px;
+            background: #f0f0f0;
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic;
+            flex-shrink: 0;
+        }
+
+        .webinar-details {
+            flex: 1;
+        }
+
+        .webinar-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .webinar-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            font-family: Arial, sans-serif;
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .register-btn {
+            background: #D2691E;
+            color: white;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .webinar-info {
+            margin-bottom: 15px;
+        }
+
+        .webinar-info p {
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #666;
+            font-family: Arial, sans-serif;
+        }
+
+        .webinar-description {
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: justify;
+            font-family: Arial, sans-serif;
+        }
+
+        .webinar-details {
+            flex: 1;
+        }
+
+        .webinar-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .webinar-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .register-btn {
+            background: #D2691E;
+            color: white;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .webinar-info {
+            margin-bottom: 15px;
+        }
+
+        .webinar-info p {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        /* Second Webinar Section */
+        .second-webinar {
+            padding: 40px;
+            border-top: 2px solid #eee;
+        }
+
+        .post-tensioning-image {
+            width: 300px;
+            height: 200px;
+            background: #f0f0f0;
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Quick Anchor Update Section */
+        .quick-anchor-update {
+            background: #f5f5f5;
+            padding: 50px;
+            margin: 30px 0;
+        }
+
+        .quick-anchor-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .quick-anchor-icon {
+            width: 100px;
+            height: 100px;
+            background: #D2691E;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .title-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100px;
+        }
+
+        .quick-anchor-title {
+            color: #D2691E;
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .version-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin: 5px 0 0 0;
+            text-transform: uppercase;
+        }
+
+        .features-list {
+            margin: 20px 0;
+        }
+
+        .features-list ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .features-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .features-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #D2691E;
+            font-size: 20px;
+        }
+
+        .special-offer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .special-offer h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .offer-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+
+        .offer-list li {
+            color: white;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            font-weight: 500;
+        }
+
+        .offer-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .update-description {
+            margin-top: 15px;
+            text-align: center;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .get-quick-anchor-btn {
+            background: #D2691E;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 30px auto;
+            display: block;
+            width: fit-content;
+        }
+
+        .get-quick-anchor-btn:hover {
+            background: #B8860B;
+        }
+
+        /* Footer Section */
+        .footer {
+            background: #333;
+            color: white;
+            padding: 40px;
+            margin-top: 40px;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .footer-logo {
+            text-align: center;
+            width: 200px;
+        }
+
+        .footer-logo-icon {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            width: 120px;
+            height: 80px;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #ccc;
+        }
+
+        .footer-logo-placeholder {
+            color: #666;
+            font-style: italic;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .footer-address {
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .footer-address p {
+            margin-bottom: 5px;
+        }
+
+        .footer-social {
+            text-align: center;
+        }
+
+        .footer-social h4 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .footer-social a {
+            color: white;
+            text-decoration: underline;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .footer-social a:hover {
+            color: #D2691E;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .main-title {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="newsletter-container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="company-name">
+                <!-- <div class="company-name-top">S. K. GHOSH</div>
+                <div class="company-name-bottom">ASSOCIATES®</div> -->
+                 <img  src="data:image/png;base64,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"
+                alt="ICC SKGA - S.K. Ghosh Associates" class="logo-image">
+            </div>
+            
+            <h1 class="main-title">The Engineer's Corner</h1>
+            <div class="separator-line"></div>
+            <p class="subtitle">SKGA Technical Newsletter</p>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Left Column - Sidebar -->
+            <div class="sidebar">
+                <h2>In this issue:</h2>
+                <ul>
+                    <li>Understanding Live Loads in Parking Garages</li>
+                    <li>Did You Know?</li>
+                    <li>Technical Questions</li>
+                    <li>Upcoming Live Webinars</li>
+                    <li>New Quick Anchor Update</li>
+                </ul>
+            </div>
+
+            <!-- Right Column - Main Article -->
+            <div class="main-article">
+                <h2 class="article-title">Understanding Live Loads in Parking Garages: What You Need to Know Concerning Passenger and Heavy Vehicles.</h2>
+                
+                <div class="article-content">
+                    <p>When designing parking garages, live loads are a crucial factor. The requirements for live loads vary significantly depending on whether the garage is for passenger vehicles or for heavy vehicles, such as trucks and buses. In this article, we will discuss how design live loads are determined and briefly mention the possible impact of electric vehicles on parking garage design.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Section: Live Loads for Passenger Vehicle Garages -->
+        <div class="new-section">
+            <h2 class="section-title">Live Loads for Passenger Vehicle Garages</h2>
+            
+            <div class="content-with-image">
+                <div class="parking-image">
+                    <img src="1.png" alt="Parking Garage" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                
+                <div class="text-content">
+                    <p>For garages built to accommodate passenger vehicles (those with a gross vehicle weight rating up to 10,000 pounds) — such as cars, SUVs, and pickup trucks, the 2024 edition of the International Building Code (2024 IBC) specifies a uniformly distributed minimum live load of 40 psf in Table 1607.1. This load is not permitted to be reduced by the live load reduction provisions of the code, except for vertical members supporting two or more floors, where it is permitted to be reduced by up to 20 percent.</p>
+                </div>
+            </div>
+            
+            <div class="additional-content">
+                <p>The same uniformly distributed minimum live load is also specified in ASCE 7-22 Table 4.3-1. Prior to ASCE 7-02, the uniformly distributed, live load for passenger vehicle garages used to be 50 psf, subject to the live load reduction provisions of the standard. In ASCE 7-02, it was decreased to 40 psf non-reducible load based on a study by Y. K. Wen of the University of Illinois at Urbana Champaign.</p>
+                
+                <p>More on live loads for heavy vehicle garages and the impact of electric vehicles on live loads for parking garages is provided in this article.</p>
+            </div>
+            </div>
+            
+            <button class="read-more-btn">Read More</button>
+        </div>
+
+        <!-- Did You Know Section -->
+        <div class="did-you-know">
+            <div class="did-you-know-header">
+                <div class="did-you-know-icon">D</div>
+                <h2 class="did-you-know-title">ID YOU KNOW</h2>
+            </div>
+            
+            <h3 style="font-size: 20px; font-weight: bold; margin-bottom: 20px; color: #333;">Evolution and Future of Cold-Formed Steel Framing Standards</h3>
+            
+            <div class="did-you-know-content">
+                <div class="did-you-know-text">
+                    <p>The American Iron and Steel Institute (AISI) abandoned its standards development and construction code advocacy program in 2023. Framing standards were initially transferred to the Steel Deck Institute (SDI) and then acquired by the Steel Framing Industry Association (SFIA) at the end of 2023. This raised questions about the future of cold-formed steel standards and their adoption into building codes. In December 2024, SFIA began managing the S200 series of standards, the S400 seismic design standard, and twelve of the S900 series test standards, supported by the SFIA Standards Committee using the canvass method.</p>
+                </div>
+                
+                <div class="construction-image">
+                    <img src="2.png" alt="Cold-Formed Steel Construction" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+            
+            <button class="read-more-btn">Read More</button>
+        </div>
+
+        <!-- SVG Embedding Examples Section -->
+        <div class="example-section">
+            <h2 class="section-title">SVG Image Embedding Examples</h2>
+            
+            <div class="embedding-examples">
+                <div class="example">
+                    <h3>1. Inline SVG (Direct Embedding)</h3>
+                    <svg class="svg-example" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="200" height="150" fill="#f0f0f0"/>
+                        <circle cx="100" cy="75" r="40" fill="#2E5A27"/>
+                        <text x="100" y="85" text-anchor="middle" fill="white" font-size="16" font-weight="bold">SVG</text>
+                        <text x="100" y="105" text-anchor="middle" fill="#333" font-size="12">Embedded</text>
+                    </svg>
+                </div>
+                
+                <div class="example">
+                    <h3>2. SVG as Icon</h3>
+                    <svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                    <p style="margin-top: 10px; font-size: 12px;">Scalable icon</p>
+                </div>
+                
+                <div class="example">
+                    <h3>3. Complex SVG Graphic</h3>
+                    <svg class="svg-example" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#2E5A27;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#4CAF50;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="200" height="150" fill="url(#grad1)"/>
+                        <circle cx="50" cy="50" r="20" fill="white" opacity="0.3"/>
+                        <circle cx="150" cy="100" r="15" fill="white" opacity="0.3"/>
+                        <text x="100" y="85" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Building</text>
+                        <text x="100" y="105" text-anchor="middle" fill="white" font-size="14">Engineering</text>
+                    </svg>
+                </div>
+                
+                <div class="example">
+                    <h3>4. SVG with CSS Styling</h3>
+                    <svg class="svg-example" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                        <style>
+                            .building { fill: #2E5A27; }
+                            .building:hover { fill: #4CAF50; transition: fill 0.3s; }
+                            .text { font-family: Arial, sans-serif; }
+                        </style>
+                        <rect class="building" x="50" y="80" width="100" height="60"/>
+                        <rect class="building" x="70" y="60" width="60" height="20"/>
+                        <rect class="building" x="80" y="40" width="40" height="20"/>
+                        <text x="100" y="120" text-anchor="middle" fill="white" font-size="14" class="text">Hover me!</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book Covers Section -->
+        <div class="book-covers-section">
+            <h2 class="section-title">Virginia adopted the 2021 IBC along with ASCE 7-22</h2>
+            
+            <div class="book-covers-content">
+                <div class="text-content">
+                    <p>The 2021 Virginia Uniform Statewide Building Code (VUSBC) is the current building code for all construction in the Commonwealth of Virginia, based on the 2021 International Building Code (IBC) with Virginia-specific amendments.</p>
+                    
+                    <p>The most important Virginia-specific modification is the replacement of the reference to ASCE 7-16 in VUSBC Chapter 35 with a reference to ASCE 7-22. The extent to which the Commonwealth has examined the compatibility between the adopted code (2021 IBC) and the referenced standard (ASCE 7-22) is unknown.</p>
+                </div>
+                
+                <div class="book-covers">
+                    <div class="book-cover" style="width: 200px; height: 280px;">
+                        <img src="6.png" alt="Virginia Building Code" style="width: 100%; height: 100%; object-fit: cover; border: 2px dashed #003366;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Questions Section -->
+        <div class="technical-questions">
+            <div class="technical-questions-header">
+                <div class="technical-questions-icon">T</div>
+                <h2 class="technical-questions-title">ECHNICAL QUESTIONS</h2>
+            </div>
+            
+            <h3 style="font-size: 20px; font-weight: bold; margin-bottom: 20px; color: #333; text-align: center; font-family: Arial, sans-serif;">Site Class Determination for Deep Pile Foundations</h3>
+            
+            <div class="question-answer">
+                <div class="qa-content">
+                    <div class="question-circle">Q</div>
+                    <div class="qa-text question">
+                        Is it logical to classify site seismic conditions based on the average shear wave velocity in the top 30 meters, even for high-rise buildings on deep piles that reach bedrock?
+                    </div>
+                </div>
+                
+                <div class="qa-content">
+                    <div class="answer-circle">A</div>
+                    <div class="qa-text answer">
+                        Given that deep piles transfer most of the structural load to the bedrock, wouldn't this make the top 30 meters less relevant for site classification?
+                    </div>
+                </div>
+                
+                <div class="qa-text explanation" style="margin-top: 20px;">
+                    <p>While the concern about load transfer to bedrock is valid from a structural perspective, it is important to recognize that site class determination is not based on load transfer mechanics. Instead, it influences the seismic design category, which in turn governs the level of detailing required in the structural design. If site class for all pile-supported structures extending to bedrock were automatically classified as Site Class A or B, the resulting seismic design categories would also be low—often eliminating the need for intermediate or special seismic detailing. The current method, which evaluates the average shear wave velocity in the upper 30 meters of soil, ensures a more conservative and consistent basis for seismic design, regardless of foundation depth.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upcoming Live Webinars Section -->
+        <div class="webinars">
+            <div class="webinars-header">
+                <div class="webinars-icon">U</div>
+                <h2 class="webinars-title">PCOMING LIVE WEBINARS</h2>
+            </div>
+            
+            <div class="webinar-content">
+                <div class="webinar-details">
+                    <div class="webinar-header-row">
+                        <h3 class="webinar-title">Design for Fire Resistance Using the International Building Code</h3>
+                        <button class="register-btn">Register</button>
+                    </div>
+                    
+                    <div class="webinar-info">
+                        <p><strong>Speaker:</strong> Steve Skalko, P.E.</p>
+                        <p><strong>Date:</strong> July 16, 2025, Wednesday, 1:00 PM to 3:00 PM CST</p>
+                        <p><strong>CEUs:</strong> 2.0 CEUs</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="webinar-content">
+                <div class="fireproofing-image">
+                    <img src="4.png" alt="Fireproofing Ceiling" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                
+                <div class="webinar-description">
+                    <p>Presentation will cover the basics for determining minimum resistances for buildings using the 2024 International Building Code. Course material presented includes determining what minimum fire resistances are required for structural elements based on occupancy and type of construction, and code recognized methods to document compliance.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Webinar Section -->
+        <div class="second-webinar">
+            <div class="webinar-header-row">
+                <h3 class="webinar-title">Designing to Minimize Restraint to Shortening Cracks in Post-Tensioned Structures</h3>
+                <button class="register-btn">Register</button>
+            </div>
+            
+            <div class="webinar-content">
+                <div class="webinar-details">
+                    <div class="webinar-info">
+                        <p><strong>Speaker:</strong> Bryan Allred, S.E.</p>
+                        <p><strong>Date:</strong> July 22, 2025, Tuesday, 1:00 PM to 3:30 PM CST</p>
+                        <p><strong>CEUs:</strong> Earn 2.5 CEUs</p>
+                    </div>
+                    
+                    <div class="qa-text">
+                        <p>Post-tensioning offers significant financial benefits through reduction in slab thickness and rebar. However, tensioned structures can be more susceptible cracking, especially if their inherent movement is prevented or restrained. This webinar will cover structural layout and methods to minimize restraint to shortening (RTS) cracks. Typical post-tensioning slip details will be explained in conjunction with construction photographs to highlight good and poor construction practices.</p>
+                    </div>
+                </div>
+                
+                <div class="post-tensioning-image">
+                    <img src="5.png" alt="Post-Tensioning Construction" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Anchor Update Section -->
+        <div class="quick-anchor-update">
+            <div class="quick-anchor-header">
+                <div class="quick-anchor-icon">N</div>
+                <div class="title-container">
+                    <h2 class="quick-anchor-title">EW UPDATE TO QUICK ANCHOR</h2>
+                    <h3 class="version-title">QUICK ANCHOR v4.1</h3>
+                </div>
+            </div>
+            
+            <div class="qa-text">
+                <p>We are excited to announce the release of the latest update to Quick Anchor – our trusted anchorage design software just got even better! This new version includes several performance enhancements and bug fixes. Two major features have been added:</p>
+            </div>
+            
+            <div class="features-list">
+                <h4 style="margin-bottom: 15px; color: #333;">New Features:</h4>
+                <ul>
+                    <li>Screw Anchors: Design and analyze screw anchors directly within the software.</li>
+                    <li>User-Defined Anchors: Create and compare custom anchors with industry standards.</li>
+                </ul>
+            </div>
+            
+            <div class="special-offer">
+                <h3 class="offer-title">Special Offer – For a Limited Time Only</h3>
+                <ul class="offer-list">
+                    <li>$50 OFF new purchases</li>
+                    <li>$25 OFF upgrades from previous versions</li>
+                </ul>
+                <p class="update-description" style="color: #ffffff !important;">
+                    If you have been waiting for the right time to buy or upgrade Quick Anchor, this is it.
+
+                </p>
+            </div>
+            
+            <button class="get-quick-anchor-btn">GET QUICK ANCHOR v4.1</button>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <div class="contact-info">
+                <p>If you have any questions or any suggestions for topics that could be covered, please contact Kunal Bhaumik at kbhaumik@skghoshassociates.com or call our office at (847)991-2700</p>
+            </div>
+            
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">
+                        <!-- Placeholder for footer logo image -->
+                        <div class="footer-logo-placeholder">
+                            Footer Logo<br>Will be replaced with<br>actual logo image
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-address">
+                    <p>S. K. Ghosh Associates LLC</p>
+                    <p>334 E. Colfax</p>
+                    <p>St. Palatine, IL</p>
+                    <p>60067</p>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Connect With Us:</h4>
+                    <a href="#">Facebook</a>
+                    <a href="#">Youtube</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
