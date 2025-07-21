@@ -62,49 +62,6 @@
             display: block;
         }
 
-        /* SVG embedding examples */
-        .svg-example {
-            width: 200px;
-            height: 150px;
-            border: 1px solid #ddd;
-            margin: 10px;
-        }
-
-        .svg-icon {
-            width: 50px;
-            height: 50px;
-            fill: #2E5A27;
-        }
-
-        /* Example section styling */
-        .example-section {
-            margin: 40px 0;
-            padding: 30px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-        }
-
-        .embedding-examples {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .example {
-            padding: 20px;
-            background: white;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .example h3 {
-            margin-bottom: 15px;
-            color: #333;
-            font-size: 16px;
-        }
-
         .main-title {
             font-family: 'Brush Script MT', cursive;
             font-size: 48px;
@@ -952,63 +909,6 @@
             <button class="read-more-btn">Read More</button>
         </div>
 
-        <!-- SVG Embedding Examples Section -->
-        <div class="example-section">
-            <h2 class="section-title">SVG Image Embedding Examples</h2>
-            
-            <div class="embedding-examples">
-                <div class="example">
-                    <h3>1. Inline SVG (Direct Embedding)</h3>
-                    <svg class="svg-example" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="200" height="150" fill="#f0f0f0"/>
-                        <circle cx="100" cy="75" r="40" fill="#2E5A27"/>
-                        <text x="100" y="85" text-anchor="middle" fill="white" font-size="16" font-weight="bold">SVG</text>
-                        <text x="100" y="105" text-anchor="middle" fill="#333" font-size="12">Embedded</text>
-                    </svg>
-                </div>
-                
-                <div class="example">
-                    <h3>2. SVG as Icon</h3>
-                    <svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                    </svg>
-                    <p style="margin-top: 10px; font-size: 12px;">Scalable icon</p>
-                </div>
-                
-                <div class="example">
-                    <h3>3. Complex SVG Graphic</h3>
-                    <svg class="svg-example" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#2E5A27;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#4CAF50;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <rect width="200" height="150" fill="url(#grad1)"/>
-                        <circle cx="50" cy="50" r="20" fill="white" opacity="0.3"/>
-                        <circle cx="150" cy="100" r="15" fill="white" opacity="0.3"/>
-                        <text x="100" y="85" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Building</text>
-                        <text x="100" y="105" text-anchor="middle" fill="white" font-size="14">Engineering</text>
-                    </svg>
-                </div>
-                
-                <div class="example">
-                    <h3>4. SVG with CSS Styling</h3>
-                    <svg class="svg-example" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-                        <style>
-                            .building { fill: #2E5A27; }
-                            .building:hover { fill: #4CAF50; transition: fill 0.3s; }
-                            .text { font-family: Arial, sans-serif; }
-                        </style>
-                        <rect class="building" x="50" y="80" width="100" height="60"/>
-                        <rect class="building" x="70" y="60" width="60" height="20"/>
-                        <rect class="building" x="80" y="40" width="40" height="20"/>
-                        <text x="100" y="120" text-anchor="middle" fill="white" font-size="14" class="text">Hover me!</text>
-                    </svg>
-                </div>
-            </div>
-        </div>
-
         <!-- Book Covers Section -->
         <div class="book-covers-section">
             <h2 class="section-title">Virginia adopted the 2021 IBC along with ASCE 7-22</h2>
@@ -1183,6 +1083,37 @@
                     <a href="#">Youtube</a>
                     <a href="#">Twitter</a>
                     <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Your Downloaded SVG Images Section -->
+        <div class="example-section">
+            <h2 class="section-title">Your Downloaded SVG Images (Standalone)</h2>
+            <div class="embedding-examples">
+                <div class="example">
+                    <h3>1. Phone Icon (from Downloads/Phone.svg)</h3>
+                    <svg width="56" height="56" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="border: 1px solid #ddd; padding: 10px;">
+                        <g id="Phone" clip-path="url(#clip0_14893_19530)">
+                            <path id="Combined Shape" fill-rule="evenodd" clip-rule="evenodd" d="M10.0088 13.4167H10.2247C10.463 13.4192 10.701 13.4016 10.9363 13.3642C11.8742 13.1521 12.7032 12.607 13.2697 11.8301L13.3397 11.7309C13.4973 11.4992 13.4679 11.1881 13.2697 10.9901C12.6747 10.3892 10.6563 8.38256 10.6563 8.38256C10.4697 8.20719 10.1905 8.17406 9.96801 8.30089L9.11051 8.83756C8.93521 8.94436 8.73231 8.99711 8.52718 8.98923C8.23206 8.9868 7.94794 8.87688 7.72801 8.68006L5.27801 6.23589C4.94211 5.86415 4.88106 5.31944 5.12635 4.88256L5.64551 4.04839C5.79052 3.81779 5.75662 3.51753 5.56385 3.32506L2.99718 0.758394C2.77036 0.536061 2.40734 0.536061 2.18051 0.758394C1.66135 1.27756 0.465514 2.65423 0.582181 4.31673C0.704681 5.86839 1.81301 7.63589 4.08218 9.91673C4.60718 10.4301 5.10885 10.8909 5.59301 11.3051C6.62551 12.1684 8.20051 13.3292 10.0088 13.4167ZM10.8022 12.7926C10.5495 12.8325 10.2935 12.8462 10.038 12.8334L10.0497 12.8276C8.39885 12.7459 6.92885 11.6609 5.96635 10.8501C5.48801 10.4534 5.00385 10.0042 4.47885 9.47923C2.33218 7.32673 1.26468 5.69923 1.16551 4.27589C1.06635 2.85256 2.12801 1.63339 2.58885 1.16673L5.15551 3.73923L4.63051 4.57339C4.24263 5.24242 4.33987 6.08672 4.86968 6.65006L7.36051 9.11173C7.68113 9.40097 8.09545 9.56463 8.52718 9.57256C8.83332 9.57381 9.13394 9.49109 9.39635 9.33339L10.2188 8.80256L12.8263 11.4101L12.7447 11.5326C12.2662 12.1687 11.5781 12.615 10.8022 12.7926Z" fill="#262626"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_14893_19530">
+                                <rect width="14" height="14" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <p style="margin-top: 10px; font-size: 12px;">This SVG is now embedded directly in the HTML - no external file needed!</p>
+                </div>
+                <div class="example">
+                    <h3>2. Image.svg (from Downloads/image.svg)</h3>
+                    <svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" style="border: 1px solid #ddd;">
+                        <rect width="200" height="150" fill="#f0f0f0"/>
+                        <circle cx="100" cy="75" r="40" fill="#2E5A27"/>
+                        <text x="100" y="85" text-anchor="middle" fill="white" font-size="16" font-weight="bold">SVG</text>
+                        <text x="100" y="105" text-anchor="middle" fill="#333" font-size="12">Embedded</text>
+                    </svg>
+                    <p style="margin-top: 10px; font-size: 12px;">This is a placeholder since image.svg was empty</p>
                 </div>
             </div>
         </div>
