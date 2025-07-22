@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Engineer's Corner - SKGA Technical Newsletter</title>
+    <!--
+        Email Client CSS Resets
+        - Helps normalize rendering across clients.
+        - Not all styles will be respected, but it's a good practice.
+    -->
+    <style type="text/css">
+        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+        table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table { border-collapse: collapse !important; }
+        body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f5f5;">
+    <!-- Main Container Table -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td align="center" style="background-color: #f5f5f5;">
+                <!--[if (gte mso 9)|(IE)]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="800">
+                <tr>
+                <td align="center" valign="top" width="800">
+                <![endif]-->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 800px; background-color: #ffffff;">
+                    
+                    <!-- === HEADER SECTION === -->
+                    <tr>
+                        <td align="center" valign="top" style="padding: 40px 40px 20px 60px; position: relative;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <!-- Logo -->
+                                <tr>
+                                    <td align="left" valign="top">
+                                        <img src="https://d2q79iu7y748xn.cloudfront.net/s/_squarelogo/256x256/a7f135391442ea56a731e417a264f164" alt="ICC SKGA - S.K. Ghosh Associates" style="max-width: 200px; height: auto; display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic;">
+                                    </td>
+                                </tr>
+                                <!-- Title -->
+                                <tr>
+                                    <td align="center" style="padding-top: 20px;">
+                                        <h1 style="font-family: 'Brush Script MT', cursive; font-size: 48px; text-align: center; margin: 0 0 10px; color: #333;">The Engineer's Corner</h1>
+                                    </td>
+                                </tr>
+                                <!-- Separator -->
+                                <tr>
+                                    <td style="padding: 15px 0;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td height="2" style="font-size: 2px; line-height: 2px; background-color: #333;">&nbsp;</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- Subtitle -->
+                                <tr>
+                                    <td align="left" style="padding-left: 20px;">
+                                        <p style="font-size: 18px; margin: 0; color: #666; font-family: Arial, sans-serif;">SKGA Technical Newsletter</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- === MAIN CONTENT (Sidebar + Article) === -->
+                    <tr>
+                        <td align="center" valign="top" style="padding: 0 20px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <!-- Sidebar -->
+                                    <td width="250" valign="top" style="background: #556B2F; color: white; padding: 50px 25px 20px 20px; vertical-align: top;">
+                                        <h2 style="font-size: 18px; margin: 0 0 15px; font-weight: bold; color: white;">In this issue:</h2>
+                                        <ul style="list-style: none; margin: 0; padding: 0;">
+                                            <li style="margin-bottom: 12px; padding-left: 20px; position: relative; color: white;">
+                                                <span style="position: absolute; left: 0; color: black;">&bull;</span> Understanding Live Loads in Parking Garages
+                                            </li>
+                                            <li style="margin-bottom: 12px; padding-left: 20px; position: relative; color: white;">
+                                                <span style="position: absolute; left: 0; color: black;">&bull;</span> Did You Know?
+                                            </li>
+                                            <li style="margin-bottom: 12px; padding-left: 20px; position: relative; color: white;">
+                                                <span style="position: absolute; left: 0; color: black;">&bull;</span> Technical Questions
+                                            </li>
+                                            <li style="margin-bottom: 12px; padding-left: 20px; position: relative; color: white;">
+                                                <span style="position: absolute; left: 0; color: black;">&bull;</span> Upcoming Live Webinars
+                                            </li>
+                                            <li style="padding-left: 20px; position: relative; color: white;">
+                                                <span style="position: absolute; left: 0; color: black;">&bull;</span> New Quick Anchor Update
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <!-- Main Article -->
+                                    <td valign="top" style="padding: 30px 40px; flex: 1;">
+                                        <h2 style="color: #D2691E; font-size: 24px; font-weight: bold; margin: 0 0 25px; line-height: 1.3;">Understanding Live Loads in Parking Garages: What You Need to Know Concerning Passenger and Heavy Vehicles.</h2>
+                                        <p style="font-size: 16px; line-height: 1.8; text-align: justify; margin: 0;">When designing parking garages, live loads are a crucial factor. The requirements for live loads vary significantly depending on whether the garage is for passenger vehicles or for heavy vehicles, such as trucks and buses. In this article, we will discuss how design live loads are determined and briefly mention the possible impact of electric vehicles on parking garage design.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- === LIVE LOADS SECTION === -->
+                    <tr>
+                        <td align="center" valign="top" style="padding: 40px 40px 40px 0; border-top: 2px solid #eee;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding-left:40px;">
+                                <!-- Section Title -->
+                                <tr>
+                                    <td align="left" style="padding-bottom: 30px;">
+                                        <h2 style="font-size: 28px; font-weight: bold; color: #333; margin: 0; font-family: Arial, sans-serif;">Live Loads for Passenger Vehicle Garages</h2>
+                                    </td>
+                                </tr>
+                                <!-- Content with Image -->
+                                <tr>
+                                    <td>
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <!-- Image -->
+                                                <td width="380" valign="top" style="padding-right: 30px;">
+                                                     <img src="https://via.placeholder.com/380x250.png?text=Replace+with+1.png" alt="Parking Garage" width="380" height="250" style="display: block; width: 100%; max-width: 380px; height: auto;">
+                                                </td>
+                                                <!-- Text Content -->
+                                                <td valign="top">
+                                                    <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.8; text-align: left; color: #333;">For garages built to accommodate passenger vehicles (those with a gross vehicle weight rating up to 10,000 pounds) — such as cars, SUVs, and pickup trucks, the 2024 edition of the International Building Code (2024 IBC) specifies a uniformly distributed minimum live load of 40 psf in Table 1607.1. This load is not permitted to be reduced by the live load reduction provisions of the code, except for vertical members supporting two or more floors, where it is permitted to be reduced by up to 20 percent.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- Additional Content -->
+                                 <tr>
+                                    <td style="padding: 5px 20px 10px 0;">
+                                        <p style="margin: 0 0 15px; font-size: 16px; line-height: 1.8; text-align: left; color: #333;">The same uniformly distributed minimum live load is also specified in ASCE 7-22 Table 4.3-1. Prior to ASCE 7-02, the uniformly distributed, live load for passenger vehicle garages used to be 50 psf, subject to the live load reduction provisions of the standard. In ASCE 7-02, it was decreased to 40 psf non-reducible load based on a study by Y. K. Wen of the University of Illinois at Urbana Champaign.</p>
+                                        <p style="margin: 0; font-size: 16px; line-height: 1.8; text-align: left; color: #333;">More on live loads for heavy vehicle garages and the impact of electric vehicles on live loads for parking garages is provided in this article.</p>
+                                    </td>
+                                </tr>
+                                <!-- Read More Button -->
+                                <tr>
+                                    <td align="center" style="padding-top: 15px;">
+                                        <table border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td align="center" style="border-radius: 5px; background-color: #D2691E;">
+                                                    <a href="https://your-link.com" target="_blank" style="font-size: 16px; font-weight: bold; font-family: Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 5px; padding: 12px 30px; border: 1px solid #D2691E; display: inline-block;">Read More</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- === DID YOU KNOW SECTION === -->
+                    <tr>
+                        <td align="center" valign="top" style="padding: 40px; border-top: 2px solid #eee;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <!-- Header -->
+                                <tr>
+                                    <td align="left" style="padding-bottom: 20px;">
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td align="center" valign="middle" width="60" height="60" style="background-color: #D2691E; border-radius: 50%; color: white; font-size: 32px; font-weight: bold;">D</td>
+                                                <td style="padding-left: 15px;">
+                                                    <h2 style="color: #D2691E; font-size: 24px; font-weight: bold; margin: 0;">ID YOU KNOW</h2>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- Title -->
+                                <tr>
+                                    <td style="padding-bottom: 20px;">
+                                        <h3 style="font-size: 20px; font-weight: bold; margin: 0; color: #333;">Evolution and Future of Cold-Formed Steel Framing Standards</h3>
+                                    </td>
+                                </tr>
+                                <!-- Content -->
+                                <tr>
+                                    <td>
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td valign="top">
+                                                    <p style="margin: 0; font-size: 16px; line-height: 1.8; text-align: justify; color: #333;">The American Iron and Steel Institute (AISI) abandoned its standards development and construction code advocacy program in 2023. Framing standards were initially transferred to the Steel Deck Institute (SDI) and then acquired by the Steel Framing Industry Association (SFIA) at the end of 2023. This raised questions about the future of cold-formed steel standards and their adoption into building codes. In December 2024, SFIA began managing the S200 series of standards, the S400 seismic design standard, and twelve of the S900 series test standards, supported by the SFIA Standards Committee using the canvass method.</p>
+                                                </td>
+                                                <td width="30"></td>
+                                                <td width="400" valign="top">
+                                                    <img src="https://via.placeholder.com/400x300.png?text=Replace+with+2.png" alt="Cold-Formed Steel Construction" width="400" style="display: block; width: 100%; max-width: 400px; height: auto;">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- Read More Button -->
+                                <tr>
+                                    <td align="center" style="padding-top: 30px;">
+                                        <table border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td align="center" style="border-radius: 5px; background-color: #D2691E;">
+                                                    <a href="https://your-link.com" target="_blank" style="font-size: 16px; font-weight: bold; font-family: Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 5px; padding: 12px 30px; border: 1px solid #D2691E; display: inline-block;">Read More</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- === BOOK COVERS SECTION === -->
+                    <tr>
+                        <td align="center" valign="top" style="padding: 40px; border-top: 2px solid #eee;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <!-- Section Title -->
+                                <tr><td align="left" style="padding-bottom: 30px;"><h2 style="font-size: 28px; font-weight: bold; color: #333; margin: 0; font-family: Arial, sans-serif;">Virginia adopted the 2021 IBC along with ASCE 7-22</h2></td></tr>
+                                <!-- Content -->
+                                <tr>
+                                    <td>
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td valign="top">
+                                                    <p style="margin: 0 0 15px; font-size: 16px; line-height: 1.8; text-align: left; color: #333;">The 2021 Virginia Uniform Statewide Building Code (VUSBC) is the current building code for all construction in the Commonwealth of Virginia, based on the 2021 International Building Code (IBC) with Virginia-specific amendments.</p>
+                                                    <p style="margin: 0; font-size: 16px; line-height: 1.8; text-align: left; color: #333;">The most important Virginia-specific modification is the replacement of the reference to ASCE 7-16 in VUSBC Chapter 35 with a reference to ASCE 7-22. The extent to which the Commonwealth has examined the compatibility between the adopted code (2021 IBC) and the referenced standard (ASCE 7-22) is unknown.</p>
+                                                </td>
+                                                <td width="30"></td>
+                                                <td width="200" valign="top">
+                                                     <img src="https://via.placeholder.com/200x280.png?text=Replace+with+6.png" alt="Virginia Building Code" width="200" style="display: block; width: 100%; max-width: 200px; height: auto;">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- === TECHNICAL QUESTIONS SECTION === -->
+                    <tr>
+                        <td align="center" valign="top" style="padding: 40px; border-top: 2px solid #eee; background-color: #FFE4B5;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <!-- Header -->
+                                <tr><td align="left" style="padding-bottom: 20px;"><table border="0" cellpadding="0" cellspacing="0"><tr><td align="center" valign="middle" width="60" height="60" style="background-color: #D2691E; border-radius: 50%; color: white; font-size: 32px; font-weight: bold;">T</td><td style="padding-left: 15px;"><h2 style="color: #D2691E; font-size: 24px; font-weight: bold; margin: 0; font-family: Arial, sans-serif;">ECHNICAL QUESTIONS</h2></td></tr></table></td></tr>
+                                <!-- Title -->
+                                <tr><td align="center" style="padding-bottom: 20px;"><h3 style="font-size: 20px; font-weight: bold; margin: 0; color: #333; font-family: Arial, sans-serif;">Site Class Determination for Deep Pile Foundations</h3></td></tr>
+                                <!-- Question -->
+                                <tr>
+                                    <td style="padding-bottom: 20px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td align="center" valign="middle" width="40" height="40" style="background-color: #0066cc; border-radius: 50%; color: white; font-weight: bold; font-size: 20px;">Q</td>
+                                                <td style="padding-left: 15px; font-weight: bold; color: #333; font-size: 16px; line-height: 1.8; font-family: Arial, sans-serif;">Is it logical to classify site seismic conditions based on the average shear wave velocity in the top 30 meters, even for high-rise buildings on deep piles that reach bedrock?</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- Answer -->
+                                <tr>
+                                    <td style="padding-bottom: 20px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td align="center" valign="middle" width="40" height="40" style="background-color: #D2691E; border-radius: 50%; color: white; font-weight: bold; font-size: 20px;">A</td>
+                                                <td style="padding-left: 15px; font-style: italic; color: #333; font-size: 16px; line-height: 1.8; font-family: Arial, sans-serif;">Given that deep piles transfer most of the structural load to the bedrock, wouldn't this make the top 30 meters less relevant for site classification?</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- Explanation -->
+                                <tr>
+                                    <td style="padding-top: 20px; text-align: justify; color: #333; font-size: 16px; line-height: 1.8; font-family: Arial, sans-serif;">
+                                        <p style="margin: 0;">While the concern about load transfer to bedrock is valid from a structural perspective, it is important to recognize that site class determination is not based on load transfer mechanics. Instead, it influences the seismic design category, which in turn governs the level of detailing required in the structural design. If site class for all pile-supported structures extending to bedrock were automatically classified as Site Class A or B, the resulting seismic design categories would also be low—often eliminating the need for intermediate or special seismic detailing. The current method, which evaluates the average shear wave velocity in the upper 30 meters of soil, ensures a more conservative and consistent basis for seismic design, regardless of foundation depth.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- === WEBINARS SECTION === -->
+                    <tr>
+                        <td align="center" valign="top" style="padding: 40px; border-top: 2px solid #eee;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <!-- Header -->
+                                <tr><td align="left" style="padding-bottom: 20px;"><table border="0" cellpadding="0" cellspacing="0"><tr><td align="center" valign="middle" width="60" height="60" style="background-color: #D2691E; border-radius: 50%; color: white; font-size: 32px; font-weight: bold;">U</td><td style="padding-left: 15px;"><h2 style="color: #D2691E; font-size: 24px; font-weight: bold; margin: 0;">PCOMING LIVE WEBINARS</h2></td></tr></table></td></tr>
+                                <!-- Webinar 1 -->
+                                <tr>
+                                    <td style="padding-bottom: 30px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td valign="top">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tr>
+                                                            <td style="padding-bottom: 15px;">
+                                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                    <tr>
+                                                                        <td><h3 style="font-size: 20px; font-weight: bold; color: #333; font-family: Arial, sans-serif; margin: 0;">Design for Fire Resistance Using the International Building Code</h3></td>
+                                                                        <td align="right">
+                                                                            <table border="0" cellspacing="0" cellpadding="0">
+                                                                                <tr>
+                                                                                    <td align="center" style="border-radius: 5px; background-color: #D2691E;">
+                                                                                        <a href="https://your-link.com" target="_blank" style="font-size: 14px; font-weight: bold; font-family: Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 5px; padding: 8px 20px; border: 1px solid #D2691E; display: inline-block;">Register</a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="margin-bottom: 15px;">
+                                                                <p style="margin: 0 0 8px; font-size: 16px; color: #666; font-family: Arial, sans-serif;"><strong>Speaker:</strong> Steve Skalko, P.E.</p>
+                                                                <p style="margin: 0 0 8px; font-size: 16px; color: #666; font-family: Arial, sans-serif;"><strong>Date:</strong> July 16, 2025, Wednesday, 1:00 PM to 3:00 PM CST</p>
+                                                                <p style="margin: 0; font-size: 16px; color: #666; font-family: Arial, sans-serif;"><strong>CEUs:</strong> 2.0 CEUs</p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td width="350" valign="top" style="padding-right: 30px;">
+                                                    <img src="https://via.placeholder.com/350x250.png?text=Replace+with+4.png" alt="Fireproofing Ceiling" width="350" style="display: block; width: 100%; max-width: 350px; height: auto;">
+                                                </td>
+                                                <td valign="top" style="font-size: 16px; line-height: 1.8; text-align: justify; font-family: Arial, sans-serif; color: #333;">
+                                                    <p style="margin: 0;">Presentation will cover the basics for determining minimum resistances for buildings using the 2024 International Building Code. Course material presented includes determining what minimum fire resistances are required for structural elements based on occupancy and type of construction, and code recognized methods to document compliance.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- === SECOND WEBINAR SECTION === -->
+                    <tr>
+                        <td align="center" valign="top" style="padding: 40px; border-top: 2px solid #eee;">
+                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <!-- Header -->
+                                <tr>
+                                    <td style="padding-bottom: 20px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td><h3 style="font-size: 20px; font-weight: bold; color: #333; font-family: Arial, sans-serif; margin: 0;">Designing to Minimize Restraint to Shortening Cracks in Post-Tensioned Structures</h3></td>
+                                                <td align="right">
+                                                    <table border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td align="center" style="border-radius: 5px; background-color: #D2691E;">
+                                                                <a href="https://your-link.com" target="_blank" style="font-size: 14px; font-weight: bold; font-family: Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 5px; padding: 8px 20px; border: 1px solid #D2691E; display: inline-block;">Register</a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- Content -->
+                                <tr>
+                                    <td>
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td valign="top">
+                                                    <div style="margin-bottom: 15px;">
+                                                        <p style="margin: 0 0 8px; font-size: 16px; color: #666; font-family: Arial, sans-serif;"><strong>Speaker:</strong> Bryan Allred, S.E.</p>
+                                                        <p style="margin: 0 0 8px; font-size: 16px; color: #666; font-family: Arial, sans-serif;"><strong>Date:</strong> July 22, 2025, Tuesday, 1:00 PM to 3:30 PM CST</p>
+                                                        <p style="margin: 0; font-size: 16px; color: #666; font-family: Arial, sans-serif;"><strong>CEUs:</strong> Earn 2.5 CEUs</p>
+                                                    </div>
+                                                    <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #333;">Post-tensioning offers significant financial benefits through reduction in slab thickness and rebar. However, tensioned structures can be more susceptible cracking, especially if their inherent movement is prevented or restrained. This webinar will cover structural layout and methods to minimize restraint to shortening (RTS) cracks. Typical post-tensioning slip details will be explained in conjunction with construction photographs to highlight good and poor construction practices.</p>
+                                                </td>
+                                                <td width="30"></td>
+                                                <td width="300" valign="top">
+                                                    <img src="https://via.placeholder.com/300x200.png?text=Replace+with+5.png" alt="Post-Tensioning Construction" width="300" style="display: block; width: 100%; max-width: 300px; height: auto;">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                             </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- === QUICK ANCHOR UPDATE SECTION === -->
+                    <tr>
+                        <td align="center" valign="top" style="background-color: #f5f5f5; padding: 50px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <!-- Header -->
+                                <tr>
+                                    <td align="left" style="padding-bottom: 20px;">
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td align="center" valign="middle" width="100" height="100" style="background-color: #D2691E; border-radius: 50%; color: white; font-size: 60px; font-weight: bold;">N</td>
+                                                <td style="padding-left: 20px;">
+                                                    <h2 style="color: #D2691E; font-size: 32px; font-weight: bold; text-transform: uppercase; margin: 0; line-height: 1.1;">EW UPDATE TO QUICK ANCHOR</h2>
+                                                    <h3 style="font-size: 24px; font-weight: bold; color: #333; margin: 5px 0 0; text-transform: uppercase;">QUICK ANCHOR v4.1</h3>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- Intro Text -->
+                                <tr>
+                                    <td style="font-size: 16px; line-height: 1.7; color: #333; margin-bottom: 20px;">
+                                        <p style="margin: 0;">We are excited to announce the release of the latest update to Quick Anchor – our trusted anchorage design software just got even better! This new version includes several performance enhancements and bug fixes. Two major features have been added:</p>
+                                    </td>
+                                </tr>
+                                <!-- Features List -->
+                                <tr>
+                                    <td style="padding: 20px 0;">
+                                        <h4 style="margin: 0 0 15px; color: #333;">New Features:</h4>
+                                        <ul style="list-style: none; padding: 0; margin: 0;">
+                                            <li style="margin-bottom: 10px; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; color: #D2691E; font-size: 20px;">&bull;</span> Screw Anchors: Design and analyze screw anchors directly within the software.</li>
+                                            <li style="padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; color: #D2691E; font-size: 20px;">&bull;</span> User-Defined Anchors: Create and compare custom anchors with industry standards.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <!-- Special Offer -->
+                                <tr>
+                                    <td align="center" style="padding: 25px 0;">
+                                        <table border="0" cellpadding="25" cellspacing="0" width="100%" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; color: white;">
+                                            <tr>
+                                                <td align="center">
+                                                    <h3 style="color: white; margin: 0 0 15px; font-weight: bold; font-size: 20px;">Special Offer – For a Limited Time Only</h3>
+                                                    <ul style="list-style: none; padding: 0; margin: 15px 0;">
+                                                        <li style="color: white; margin-bottom: 8px; padding-left: 20px; position: relative; font-weight: 500;"><span style="position: absolute; left: 0; color: #4CAF50; font-weight: bold;">&#10003;</span> $50 OFF new purchases</li>
+                                                        <li style="color: white; padding-left: 20px; position: relative; font-weight: 500;"><span style="position: absolute; left: 0; color: #4CAF50; font-weight: bold;">&#10003;</span> $25 OFF upgrades from previous versions</li>
+                                                    </ul>
+                                                    <p style="margin: 15px 0 0; text-align: center; font-style: italic; line-height: 1.5; color: #ffffff !important;">If you have been waiting for the right time to buy or upgrade Quick Anchor, this is it.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- Button -->
+                                <tr>
+                                    <td align="center" style="padding: 30px 0 0;">
+                                        <table border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td align="center" style="border-radius: 5px; background-color: #D2691E;">
+                                                    <a href="https://your-link.com" target="_blank" style="font-size: 18px; font-weight: bold; font-family: Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 5px; padding: 15px 30px; border: 1px solid #D2691E; display: inline-block;">GET QUICK ANCHOR v4.1</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- === FOOTER SECTION === -->
+                    <tr>
+                        <td align="center" valign="top" style="background-color: #333; padding: 0; margin-top: 40px;">
+                             <a href="https://your-link.com" target="_blank">
+                                <img src="https://via.placeholder.com/800x150.png?text=Replace+with+7.png" alt="Footer Image" width="800" style="display: block; width: 100%; max-width: 800px; height: auto;">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                <!--[if (gte mso 9)|(IE)]>
+                </td>
+                </tr>
+                </table>
+                <![endif]-->
+            </td>
+        </tr>
+    </table>
+</body>
+</html> 
